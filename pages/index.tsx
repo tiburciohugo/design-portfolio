@@ -1,7 +1,9 @@
-import Head from 'next/head'
-import { Inter } from '@next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
+/* eslint-disable @next/next/no-img-element */
+import Head from "next/head";
+import Navbar from "@/components/UI/Navbar";
+import Slider from "@/components/Slider";
+import Image from "next/image";
+import Button from "@/components/UI/Button";
 
 export default function Home() {
   return (
@@ -13,9 +15,155 @@ export default function Home() {
         <link rel="icon" href="/assets/favicon-32x32.png" />
       </Head>
 
-      <main>
-        <h1 className='text-2xl font-bold text-center text-purple'>Hello Next</h1>
-      </main>
+      <div className="max-w-[90rem] md:w-[43.125rem] md:mx-auto lg:w-[69.438rem]">
+        <Navbar />
+
+        <section className="mt-4 md:mt-6 lg:mt-8 max-w-[47rem] mx-auto px-3">
+          <h1 className="text-4xl font-bold text-center text-black">
+            Design solutions made easy
+          </h1>
+          <p className="px-12 mt-4 font-medium text-center text-gray max-w-[45.625rem] md:px-[6rem] lg:px-[8rem]">
+            With over ten years of experience in various design disciplines, I’m
+            your one-stop shop for your design needs.
+          </p>
+        </section>
+
+        <section className="grid grid-cols-1 w-[21.438rem] mx-auto mt-6 md:grid-cols-2 md:gap-6 md:space-y-0 md:w-full lg:grid-cols-3 lg:grid-rows-1 md:px-4">
+          <div className="rounded-xl bg-purple h-[22.813rem] p-4 relative w-full">
+            <img
+              className="absolute right-6"
+              src="/assets/pattern-graphic-design.svg"
+              alt="graphic-design"
+            />
+            <h3 className="absolute text-2xl font-semibold text-white bottom-4 left-6">
+              Graphic Design
+            </h3>
+          </div>
+
+          <div className="gap-2 mt-6 md:grid md:grid-cols-2 md:m-0 md:gap-4">
+            <div className="flex items-center justify-between md:col-span-2 md:space-x-4">
+              <div className="w-[9.938rem] h-[11.375rem] bg-orange rounded-xl relative">
+                <img
+                  src="/assets/pattern-ui-ux.svg"
+                  alt="pattern-ui-ux"
+                  className="absolute right-6 top-6"
+                />
+                <h3 className="absolute text-2xl font-semibold text-white uppercase bottom-4 left-6">
+                  ui/ux
+                </h3>
+              </div>
+
+              <div className="w-[9.938rem] h-[11.375rem] bg-salmon rounded-xl relative">
+                <img
+                  src="/assets/pattern-apps.svg"
+                  alt="pattern-apps"
+                  className="absolute right-6 top-6"
+                />
+                <h3 className="absolute text-2xl font-semibold text-white capitalize bottom-4 left-6">
+                  apps
+                </h3>
+              </div>
+            </div>
+
+            <div className="rounded-xl bg-red h-[9.875rem] p-4 relative w-full mt-6 lg:col-span-2 md:col-span-2 md:mt-0">
+              <img
+                className="absolute right-6"
+                src="/assets/pattern-illustrations.svg"
+                alt="illustrations"
+              />
+              <h3 className="absolute text-2xl font-semibold text-white capitalize bottom-4 left-6">
+                illustrations
+              </h3>
+            </div>
+          </div>
+
+          <div className="md:inline-flex md:space-x-4 md:col-span-2 lg:grid lg:col-auto lg:space-x-0">
+            <div
+              id="1"
+              className="rounded-xl bg-green h-[11.375rem] p-4 relative w-full mt-6 md:mt-0"
+            >
+              <img
+                className="absolute right-6"
+                src="/assets/pattern-photography.svg"
+                alt="photography"
+              />
+              <h3 className="absolute text-2xl font-semibold text-white capitalize bottom-4 left-6">
+                photography
+              </h3>
+            </div>
+
+            <div
+              id="2"
+              className="rounded-xl bg-brown h-[11.375rem] p-4 relative w-full mt-6 lg:h-[9.875rem] md:mt-0 lg:mt-4"
+            >
+              <img
+                className="absolute right-6"
+                src="/assets/pattern-motion-graphics.svg"
+                alt="motion-graphics"
+              />
+              <h3 className="absolute text-2xl font-semibold text-white capitalize bottom-4 left-6">
+                motion graphics
+              </h3>
+            </div>
+          </div>
+        </section>
+
+        <section className="flex-col md:grid md:grid-cols-2  justify-center items-center mt-20 mx-auto w-full px-4">
+          <Image
+            src={"/assets/image-amy.webp"}
+            alt="Amy"
+            width={300}
+            height={300}
+            className="w-auto h-auto mx-auto"
+          />
+          <div className="mt-8 flex-col justify-center items-center md:mt-0">
+            <h2 className="font-bold text-2xl text-center px-8 md:text-left">
+              I’m Amy, and I’d love to work on your next project
+            </h2>
+            <p className="text-gray text-center font-medium px-6 mt-4 md:text-left md:px-8">
+              I love working with others to create beautiful design solutions.
+              I’ve designed everything from brand illustrations to complete
+              mobile apps. I’m also handy with a camera!
+            </p>
+            <Button
+              bg="bg-red"
+              hover="bg-orange"
+              className="mx-auto mt-6 block md:mx-8"
+            />
+          </div>
+        </section>
+
+        <section>
+          <h2 className="font-bold text-2xl text-center mt-20 capitalize">
+            my work
+          </h2>
+          <Slider />
+        </section>
+
+        <section className="bg-black mx-4 mt-20 rounded-lg text-white px-6 py-12 lg:grid lg:grid-cols-2 lg:px-10 lg:space-x-64">
+          <div>
+            <h2 className="font-bold text-2xl text-center lg:text-left">
+              Book a call with me
+            </h2>
+            <p className="mt-4 text-center px-2 lg:text-left lg:px-0">
+              I’d love to have a chat to see how I can help you. The best first
+              step is for us to discuss your project during a free consultation.
+              Then we can move forward from there.
+            </p>
+          </div>
+          <div className="lg:grid lg:content-center lg:col-end-3">
+            <Button
+              bg="bg-red"
+              hover="bg-orange"
+              className="mx-auto mt-6 block max-h-24"
+            />
+          </div>
+        </section>
+
+        <div className="mt-6">
+          <Navbar />
+        </div>
+      </div>
     </>
-  )
+  );
 }
