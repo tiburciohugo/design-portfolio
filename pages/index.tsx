@@ -129,7 +129,7 @@ export default function Home() {
             <Button
               bg={"bg-red"}
               hover={"bg-orange"}
-              className="mx-auto mt-6 block md:mx-8"
+              className="mx-auto mt-6 block md:mx-8 hover:bg-orange"
             />
           </div>
         </section>
@@ -156,7 +156,7 @@ export default function Home() {
             <Button
               bg={"bg-red"}
               hover={"bg-orange"}
-              className="mx-auto mt-6 block max-h-24"
+              className="mx-auto mt-6 block max-h-24 hover:bg-orange"
             />
           </div>
         </section>

@@ -2,15 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  .bg-orange {
+    background-color: #f6a560; /* app-orange */
+  }
+}
+
 @layer components {
   /* Custom horizontal scroll bar */
   .h-scroll::-webkit-scrollbar {
-   border-radius: 10px;
-   height: 6px;
-   width: 6px;
- }
- .h-scroll::-webkit-scrollbar-thumb:horizontal {
-   background: #5a698f; /* app-steel-blue */
-   border-radius: 10px;
- }
+    border-radius: 10px;
+    height: 6px;
+    width: 6px;
+  }
+  .h-scroll::-webkit-scrollbar-thumb:horizontal {
+    background: #5a698f; /* app-steel-blue */
+    border-radius: 10px;
+  }
 }
