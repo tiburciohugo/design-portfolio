@@ -115,6 +115,7 @@ export default function Home() {
             width={300}
             height={300}
             className="w-auto h-auto mx-auto"
+            priority
           />
           <div className="mt-8 flex-col justify-center items-center md:mt-0">
             <h2 className="font-bold text-2xl text-center px-8 md:text-left">
