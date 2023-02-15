@@ -126,8 +126,8 @@ export default function Home() {
               mobile apps. I’m also handy with a camera!
             </p>
             <Button
-              bg="bg-red"
-              hover="bg-orange"
+              bg={"bg-red"}
+              hover={"bg-orange"}
               className="mx-auto mt-6 block md:mx-8"
             />
           </div>
@@ -153,8 +153,8 @@ export default function Home() {
           </div>
           <div className="lg:grid lg:content-center lg:col-end-3">
             <Button
-              bg="bg-red"
-              hover="bg-orange"
+              bg={"bg-red"}
+              hover={"bg-orange"}
               className="mx-auto mt-6 block max-h-24"
             />
           </div>
