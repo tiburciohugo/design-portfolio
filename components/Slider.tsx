@@ -64,7 +64,7 @@ export default function Slider() {
               key={index}
               src={image}
               alt={`Image ${index + 1}`}
-              className="object-fit h-full min-w-[24rem] transition duration-500 ease-in-out transform rounded-3xl p-4"
+              className="object-fit h-full min-w-[24rem] transition duration-500 ease-in-out transform rounded-3xl p-4  hover:scale-110"
               ref={(imageRef) => {
                 if (imageRef) {
                   imageRefs.current[index] = imageRef;
